@@ -1,4 +1,5 @@
 ﻿using CRUD.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -27,6 +28,11 @@ namespace CRUD.Controllers
             return View();
         }
         public IActionResult Login()
+        {
+            return View();
+        }
+        [Authorize]
+        public IActionResult Department()
         {
             return View();
         }
