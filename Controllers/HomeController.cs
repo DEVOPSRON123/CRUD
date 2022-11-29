@@ -31,6 +31,11 @@ namespace CRUD.Controllers
         {
             return View();
         }
+        [HttpPost]
+        public IActionResult Login(Login login)
+        {
+            return RedirectToAction("Index");
+        }
         [Authorize]
         public IActionResult Department()
         {
